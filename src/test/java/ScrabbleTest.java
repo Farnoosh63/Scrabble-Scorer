@@ -42,4 +42,10 @@ import static org.junit.Assert.*;
 
 //The Scrabble score take a word mixed lower and upper case and returns a Scrabble score for that word.For example we expect an input of Ace to return 5.
 
+  @Test
+  public void runScrabble_returnsScoreMixedLettersRegardlessOfCase_5() {
+    Scrabble testScrabble = new Scrabble();
+    Integer expected = 5;
+    assertEquals(expected, testScrabble.runScrabble("Ace"));
+  }
 }
