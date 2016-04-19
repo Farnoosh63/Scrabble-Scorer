@@ -24,7 +24,21 @@ import static org.junit.Assert.*;
 
  //The Scrabble score take a word and returns a Scrabble score for that word.For example we expect an input of ACE to return 5.
 
+ @Test
+ public void runScrabble_returnsScoreforAllLettersOfOneWord_5() {
+   Scrabble testScrabble = new Scrabble();
+   Integer expected = 5;
+   assertEquals(expected, testScrabble.runScrabble("ACE"));
+ }
+
  //The Scrabble score take a letter and returns a Scrabble score for that letter regardless of case.For example we expect an input of a to return 1.
+
+ @Test
+ public void runScrabble_returnsScoreRegardlessOfCase_1() {
+   Scrabble testScrabble = new Scrabble();
+   Integer expected = 1;
+   assertEquals(expected, testScrabble.runScrabble("a"));
+ }
 
 //The Scrabble score take a word mixed lower and upper case and returns a Scrabble score for that word.For example we expect an input of Ace to return 5.
 
